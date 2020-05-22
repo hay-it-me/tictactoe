@@ -1,7 +1,7 @@
 
 public class StartTTT{
     private int playerNum;
-	int [] tttGrid = new int[9];	
+    int [] tttGrid = new int[9];	
 
     //Appropriate getters and setters.
     public void setPlayerNum(int playerNum){
@@ -39,10 +39,10 @@ public class StartTTT{
     //Parses locations of the tiles into specific integers for the array.
     public int tileNum(String location){
         
-		switch (location){
+        switch (location){
             case "upperLeft": 
                 return 0;
-			case "upperCenter":
+            case "upperCenter":
                 return 1; 
             case "upperRight":
                 return 2;
@@ -81,7 +81,7 @@ public class StartTTT{
         else {
             System.out.println("Your input was not recognised.");
         }
-	}
+    }
     //Prints the current board state.
     public void printBoard(){
         System.out.println("-----------------");
@@ -123,7 +123,7 @@ public class StartTTT{
             if (tttGrid[0] == tttGrid[3] && tttGrid[3] == tttGrid[6]){
                 return true;
             }
-		}
+        }
         if (tttGrid[4] != 0){
             if (tttGrid[0] == tttGrid[4] && tttGrid[4] == tttGrid[8]){
                 return true;
@@ -136,16 +136,16 @@ public class StartTTT{
             }
             if (tttGrid[1] == tttGrid[4] && tttGrid[4] == tttGrid[7]){
                 return true;
-			}
+            }
         }
         if (tttGrid[8] != 0){
             if (tttGrid[6] == tttGrid[7] && tttGrid[7] == tttGrid[8]){
                 return true;
-			}
+            }
             if (tttGrid[2] == tttGrid[5] && tttGrid[5] == tttGrid[8]){
                 return true;
-			}
+            }
         }
-		return false;
+        return false;
     }
 }
